@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package com.hmproductions.multiplayertutorial;
+option java_multiple_files = false;
+
+import "actions/GetScore.proto";
+
+service TutorialActionService {
+    rpc GetScore(actions.GetScoreRequest) returns (actions.GetScoreResponse);
+}

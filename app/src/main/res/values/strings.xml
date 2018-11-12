@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MultiplayerTutorial</string>
+    <string name="get_score">Get Score</string>
+    <string name="enter_your_id_here">Enter your ID here</string>
+</resources>
