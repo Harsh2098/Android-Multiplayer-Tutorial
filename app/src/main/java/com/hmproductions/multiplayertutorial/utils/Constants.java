@@ -27,6 +27,6 @@ public class Constants {
             "URMOMpGAY55X3UVP/uylizBWYGv9lEaY0ARFp5ECRGObDxI=\n" +
             "-----END CERTIFICATE-----";
 
-    public static final String SERVER_ADDRESS = "10.2.65.145"; // Another example :- "dalal.pragyan.org"
+    public static final String SERVER_ADDRESS = "192.168.56.1"; // Another example :- "dalal.pragyan.org"
     public static final int SERVER_PORT = 8080;
 }
