@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
         android:hint="@string/enter_your_id_here"
-        android:inputType="number"
+        android:inputType="text"
         android:textColor="@android:color/background_dark"
         android:textSize="22sp" />
 

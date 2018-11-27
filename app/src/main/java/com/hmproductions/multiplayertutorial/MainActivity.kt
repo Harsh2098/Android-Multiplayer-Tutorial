@@ -25,10 +25,10 @@ class MainActivity : AppCompatActivity() {
         scoreButton.setOnClickListener { getGreetingAsynchronously(idEditText.text.toString()) }
     }
 
-    private fun getGreetingAsynchronously(id: String) {
+    private fun getGreetingAsynchronously(name: String) {
         doAsync {
 
-            val getScoreResponse = blockingStub.getScore(GetScore.GetScoreRequest.newBuilder().setId(id.toInt()).build())
+            val getScoreResponse = blockingStub.getScore(GetScore.GetScoreRequest.newBuilder().setName(name).build())
 
             uiThread {
                 if(getScoreResponse.statusCode == GetScore.GetScoreResponse.StatusCode.OK)

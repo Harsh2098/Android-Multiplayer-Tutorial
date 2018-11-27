@@ -25,19 +25,19 @@ public class ChannelModule {
     @Provides
     @TutorialApplicationScope
     public ManagedChannel getManagedChannel(Context context) {
-        //try {
+        try {
             return OkHttpChannelBuilder
                     .forAddress(Constants.SERVER_ADDRESS, Constants.SERVER_PORT)
-                    //.sslSocketFactory(getSocketFactory(context))
+                    .sslSocketFactory(getSocketFactory(context))
                     .connectionSpec(ConnectionSpec.MODERN_TLS)
                     .usePlaintext()
                     .hostnameVerifier((hostname, session) -> true)
                     .build();
-//        } catch (KeyStoreException | CertificateException | IOException | NoSuchAlgorithmException | UnrecoverableKeyException | KeyManagementException | GooglePlayServicesRepairableException | GooglePlayServicesNotAvailableException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return null;
+        } catch (KeyStoreException | CertificateException | IOException | NoSuchAlgorithmException | UnrecoverableKeyException | KeyManagementException | GooglePlayServicesRepairableException | GooglePlayServicesNotAvailableException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
     private SSLSocketFactory getSocketFactory(Context context) throws KeyStoreException, CertificateException, NoSuchAlgorithmException, IOException, KeyManagementException, UnrecoverableKeyException, GooglePlayServicesNotAvailableException, GooglePlayServicesRepairableException {

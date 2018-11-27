@@ -5,6 +5,7 @@ option java_multiple_files = false;
 
 message GetScoreRequest {
     uint32 id = 1;
+    string name = 2;
 }
 
 message GetScoreResponse {
