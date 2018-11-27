@@ -1,7 +1,6 @@
 package com.hmproductions.multiplayertutorial;
 
 import com.hmproductions.multiplayertutorial.data.ConnectionData;
-import com.hmproductions.multiplayertutorial.services.TutorialActionServiceImpl;
 import com.hmproductions.multiplayertutorial.utils.Constants;
 import com.hmproductions.multiplayertutorial.utils.ServerHeaderInterceptor;
 import io.grpc.Server;
@@ -26,7 +25,7 @@ public class TutorialServer {
 
         Server server = ServerBuilder
                 .forPort(Constants.SERVER_PORT)
-                .addService(new TutorialActionServiceImpl())
+                //.addService(new TutorialActionServiceImpl())
                 .intercept(new ServerHeaderInterceptor())
                 //.useTransportSecurity(serverCertificateFile, serverKeyFile)
                 .handshakeTimeout(30, TimeUnit.SECONDS)

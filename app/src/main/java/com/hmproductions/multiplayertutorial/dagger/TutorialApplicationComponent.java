@@ -4,7 +4,7 @@ import com.hmproductions.multiplayertutorial.MainActivity;
 import dagger.Component;
 
 @TutorialApplicationScope
-@Component (modules = {ContextModule.class, StubModule.class, ChannelModule.class })
+@Component (modules = {  })
 public interface TutorialApplicationComponent {
     void inject(MainActivity mainActivity);
 }
